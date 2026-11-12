@@ -82,9 +82,9 @@ async function buscarEndereco() {
 
             card.innerHTML = `
                 <p class="destaque"> 🤘CEP: ${itemEndereco.cep} </p>
-                <p><b>Logradouro:</b> ${itemEndereco.Logradouro || 'não informado'}</p>
-                <p><strong>Bairro:</strong>${itemEndereco.Bairro || 'não informado'}</p> 
-                <p><strong>Cidade/UF:</strong>${itemEndereco.localidade || 'não informado'} - $ {itemEndereco.UF}</p> 
+                <p><b>Logradouro:</b> ${itemEndereco.logradouro || 'não informado'}</p>
+                <p><strong>Bairro:</strong>${itemEndereco.bairro || 'não informado'}</p> 
+                <p><strong>Cidade/UF:</strong>${itemEndereco.localidade || 'não informado'} - ${itemEndereco.uf}</p> 
                 <p><strong>Complemento:</strong>${itemEndereco.complemento ? itemEndereco.complemento : 'nenhum'}</p>
             `;
 
