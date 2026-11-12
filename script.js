@@ -6,7 +6,7 @@ const btnBuscar = document.getElementById('btnBuscar');
 const divMensagem = document.getElementById('mensagem');
 const divResultado = document.getElementById('resultado');
 
-const containerLista = document.getElementById('ListaResultados');
+const containerLista = document.getElementById('listaResultados');
 
 //adicionando os eventos nos componentes
 
@@ -24,9 +24,10 @@ btnBuscar.addEventListener('click', buscarEndereco);
 async function buscarEndereco() {
     const valorUf = selectedUf.value.trim();
     const valorCidade = inputCidade.value.trim();
+    const valorRua = inputRua.value.trim();
 
     esconderElementos(divMensagem);
-    divResukltado.classList.remove('oculto');
+    divResultado.classList.remove('oculto');
     containerLista.innerHTML = '';
 
     //validações do cep
@@ -60,7 +61,7 @@ async function buscarEndereco() {
 
 
         // montando a url para requisição 
-        const url = `https://viacep.com.br/ws/${valorUF}/${cidadeFormatada}/${ruaFormatada}/json/`;
+        const url = `https://viacep.com.br/ws/${valorUf}/${cidadeFormatada}/${ruaFormatada}/json/`;
         const resposta = await fetch(url);
         
 
